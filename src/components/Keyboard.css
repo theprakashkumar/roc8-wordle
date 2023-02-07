@@ -1,0 +1,14 @@
+.keyboard {
+    width: 450px;
+    margin-top: 30px;
+    align-self: center;
+}
+
+.keyboard-row {
+    flex: 33%;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
