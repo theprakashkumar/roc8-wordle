@@ -6,7 +6,6 @@ import Keyboard from "./Keyboard";
 
 const Board = () => {
     const { board } = useContext(DataContext);
-    console.log(board);
     return (
         <div className="board-container">
             <div className="board">
