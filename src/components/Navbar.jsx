@@ -1,7 +1,9 @@
+import "./Navbar.css";
+
 const Navbar = () => {
     return (
-        <nav>
-            <div>Wordle</div>
+        <nav className="navbar">
+            <h1 className="brand">Wordle</h1>
         </nav>
     );
 };
