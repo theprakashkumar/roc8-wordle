@@ -1,14 +1,11 @@
 .board-container {
     width: 100vw;
-    display: flex;
-    align-items: center;
-    padding-top: 50px;
-    flex-direction: column;
 }
 
 .board {
-    width: 350px;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
+    width: 98%;
+    max-width: 320px;
+    height: 380px;
+    margin-left: auto;
+    margin-right: auto;
 }

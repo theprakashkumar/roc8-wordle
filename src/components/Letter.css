@@ -1,22 +1,27 @@
 .letter {
-    flex: 33%;
-    height: 100%;
-    border: 1px solid grey;
-    margin: 5px;
+    border: 2px solid var(--main-text-light-color);
+    border-radius: 5px;
+    width: 20%;
+    margin: 2px;
     display: grid;
     place-items: center;
-    font-size: 30px;
-    font-weight: bolder;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4rem;
 }
 
-.correct {
-    background-color: #528d4e;
-}
-.almost {
-    background-color: #b49f39;
+.letter.correct {
+    background: var(--correct);
+    border: 2px solid var(--correct);
+    color: #fff;
 }
 
-.wrong {
-    background-color: #3a393c;
+.letter.almost {
+    background: var(--almost);
+    border: 2px solid var(--almost);
+    color: #fff;
+}
+
+.letter.wrong {
+    background: var(--wrong);
+    border: 2px solid var(--wrong);
+    color: #fff;
 }

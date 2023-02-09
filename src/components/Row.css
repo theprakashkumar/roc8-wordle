@@ -1,6 +1,7 @@
 .row {
-    flex: 33%;
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    height: 16.6%;
+    /* flex: 33%; */
+
 }

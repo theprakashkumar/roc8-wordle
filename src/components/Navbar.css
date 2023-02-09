@@ -1,9 +1,11 @@
 .navbar {
-    height: 10rem;
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .brand {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-family: "Pacifico", cursive;
-    margin-top: 10px;
 }

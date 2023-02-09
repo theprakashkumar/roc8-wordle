@@ -2,11 +2,9 @@ import "./Board.css";
 import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 import Row from "./Row";
-import Keyboard from "./Keyboard";
-import GameOver from "./GameOver";
 
 const Board = () => {
-    const { board, gameOver } = useContext(DataContext);
+    const { board } = useContext(DataContext);
     return (
         <div className="board-container">
             <div className="board">
