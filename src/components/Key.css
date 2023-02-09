@@ -16,3 +16,7 @@
 #big-key {
     width: 70px;
 }
+
+.disabled {
+    background-color: #3a393c;
+}

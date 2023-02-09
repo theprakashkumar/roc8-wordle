@@ -10,7 +10,7 @@ const Board = () => {
         <div className="board-container">
             <div className="board">
                 {board.map((row, index) => (
-                    <Row rowData={row} rowNumber={index + 1} />
+                    <Row rowData={row} rowNumber={index} />
                 ))}
                 <Keyboard />
             </div>

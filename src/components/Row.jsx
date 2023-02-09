@@ -3,8 +3,12 @@ import Letter from "./Letter";
 const Row = ({ rowData, rowNumber }) => {
     return (
         <div className="row">
-            {rowData.map((letter) => (
-                <Letter letter={letter} />
+            {rowData.map((letter, index) => (
+                <Letter
+                    letter={letter}
+                    letterPosition={index}
+                    rowNumber={rowNumber}
+                />
             ))}
         </div>
     );

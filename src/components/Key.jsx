@@ -11,9 +11,8 @@ const Key = ({ keyValue, bigKey }) => {
         onEnter,
         onDelete,
         onLetter,
+        wrongGuess,
     } = useContext(DataContext);
-
-    // const { letter: currentLetter, row: currentRow } = currentAttempt;
 
     const clickHandler = (key) => {
         if (key === "Enter") {
@@ -24,11 +23,13 @@ const Key = ({ keyValue, bigKey }) => {
             onLetter(key);
         }
     };
+
+    const isWrongGuess = wrongGuess.includes(keyValue);
     return (
         <div
-            className="key"
+            className={`key ${isWrongGuess && "disabled"}`}
             id={bigKey && "big-key"}
-            onClick={() => clickHandler(keyValue)}
+            onClick={!isWrongGuess ? () => clickHandler(keyValue) : undefined}
         >
             {keyValue}
         </div>
