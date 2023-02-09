@@ -1,30 +1,29 @@
 .key {
     width: 30px;
     height: 45px;
-    margin: 5px;
-    border-radius: 4px;
+    margin: 3px;
+    border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    background-color: grey;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    background-color: var(--main-text-color);
+    color: #fff;
     cursor: pointer;
 }
 
 #big-key {
-    width: 70px;
+    width: 72px;
 }
 
-.disabled {
-    background-color: #3a393c;
+.key.wrong {
+    background: var(--wrong);
 }
 
-.right {
-    background-color: #528d4e;
+.key.right {
+    background: var(--correct);
 }
 
-.almost {
-    background-color: #b49f39;
+.key.almost {
+    background: var(--almost);
 }

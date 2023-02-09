@@ -28,7 +28,7 @@ const Key = ({ keyValue, bigKey }) => {
     const isAlmostGuess = almostGuess.includes(keyValue);
     return (
         <div
-            className={`key ${isWrongGuess && "disabled"} ${
+            className={`key ${isWrongGuess && "wrong"} ${
                 row > 0 &&
                 (isRightGuess ? "right" : isAlmostGuess ? "almost" : "")
             }`}
