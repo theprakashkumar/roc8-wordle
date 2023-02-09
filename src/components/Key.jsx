@@ -4,14 +4,13 @@ import { DataContext } from "../context/DataContext";
 
 const Key = ({ keyValue, bigKey }) => {
     const {
-        board,
-        setBoard,
-        currentAttempt,
-        setCurrentAttempt,
+        currentAttempt: { row },
         onEnter,
         onDelete,
         onLetter,
         wrongGuess,
+        rightGuess,
+        almostGuess,
     } = useContext(DataContext);
 
     const clickHandler = (key) => {
@@ -25,9 +24,14 @@ const Key = ({ keyValue, bigKey }) => {
     };
 
     const isWrongGuess = wrongGuess.includes(keyValue);
+    const isRightGuess = rightGuess.includes(keyValue);
+    const isAlmostGuess = almostGuess.includes(keyValue);
     return (
         <div
-            className={`key ${isWrongGuess && "disabled"}`}
+            className={`key ${isWrongGuess && "disabled"} ${
+                row > 0 &&
+                (isRightGuess ? "right" : isAlmostGuess ? "almost" : "")
+            }`}
             id={bigKey && "big-key"}
             onClick={() => clickHandler(keyValue)}
         >

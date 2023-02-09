@@ -23,6 +23,10 @@ export const DataProvider = ({ children }) => {
     });
     // list of word which is not in the word
     const [wrongGuess, setWrongGuess] = useState([]);
+    // list of words which is guessed right
+    const [rightGuess, setRightGuess] = useState([]);
+    // list of words which are there in the word but not at guessed at right place
+    const [almostGuess, setAlmostGuess] = useState([]);
     const [gameOver, setGameOver] = useState(false);
     // if word is correctly guessed
     const [correctlyGuessed, setCorrectlyGuessed] = useState(false);
@@ -41,7 +45,6 @@ export const DataProvider = ({ children }) => {
             setGameOver(true);
             setCorrectlyGuessed(true);
             setCurrentAttempt({ letter: 0, row: currentRow + 1 });
-            console.log("gameover");
             return;
         }
 
@@ -94,6 +97,10 @@ export const DataProvider = ({ children }) => {
                 onDelete,
                 onLetter,
                 wrongGuess,
+                rightGuess,
+                setRightGuess,
+                almostGuess,
+                setAlmostGuess,
                 setWrongGuess,
                 gameOver,
                 setGameOver,
