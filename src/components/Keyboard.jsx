@@ -8,11 +8,6 @@ const Keyboard = () => {
     const keys2 = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
     const keys3 = ["Z", "X", "C", "V", "B", "N", "M"];
 
-    // key code for all the letter in the wrongGuess
-    const wrongGuessKeyCode = wrongGuess.map((wrongGuess) =>
-        wrongGuess.charCodeAt()
-    );
-
     const handleKeyboard = (event) => {
         if (event.key === "Enter") {
             onEnter();
@@ -21,11 +16,10 @@ const Keyboard = () => {
         } else {
             let letterCode = event.keyCode;
             if (
-                // key code for alphabet and key code should not be in the wrongGuess
-                ((letterCode > 64 && letterCode < 91) ||
-                    (letterCode > 96 && letterCode < 123) ||
-                    letterCode === 8) &&
-                !wrongGuessKeyCode.includes(letterCode)
+                // key code for alphabet that are allowed
+                (letterCode > 64 && letterCode < 91) ||
+                (letterCode > 96 && letterCode < 123) ||
+                letterCode === 8
             ) {
                 onLetter(event.key.toUpperCase());
             }

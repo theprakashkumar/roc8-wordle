@@ -29,7 +29,7 @@ const Key = ({ keyValue, bigKey }) => {
         <div
             className={`key ${isWrongGuess && "disabled"}`}
             id={bigKey && "big-key"}
-            onClick={!isWrongGuess ? () => clickHandler(keyValue) : undefined}
+            onClick={() => clickHandler(keyValue)}
         >
             {keyValue}
         </div>
