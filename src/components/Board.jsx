@@ -13,7 +13,6 @@ const Board = () => {
                 {board.map((row, index) => (
                     <Row rowData={row} rowNumber={index} />
                 ))}
-                {gameOver ? <GameOver /> : <Keyboard />}
             </div>
         </div>
     );
