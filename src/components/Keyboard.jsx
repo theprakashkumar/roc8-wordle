@@ -36,18 +36,18 @@ const Keyboard = () => {
         <div className="keyboard">
             <div className="keyboard-row">
                 {keys1.map((key) => (
-                    <Key keyValue={key} />
+                    <Key keyValue={key} key={key} />
                 ))}
             </div>
             <div className="keyboard-row">
                 {keys2.map((key) => (
-                    <Key keyValue={key} />
+                    <Key keyValue={key} key={key} />
                 ))}
             </div>
             <div className="keyboard-row">
                 <Key keyValue={"Enter"} bigKey={true} />
                 {keys3.map((key) => (
-                    <Key keyValue={key} />
+                    <Key keyValue={key} key={key} />
                 ))}
                 <Key keyValue={"Delete"} bigKey={true} />
             </div>

@@ -8,6 +8,7 @@ const Row = ({ rowData, rowNumber }) => {
                     letter={letter}
                     letterPosition={index}
                     rowNumber={rowNumber}
+                    key={index}
                 />
             ))}
         </div>
