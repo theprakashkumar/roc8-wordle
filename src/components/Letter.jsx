@@ -25,15 +25,16 @@ const Letter = ({ letter, letterPosition, rowNumber }) => {
         }
         // put right guessed word into the rightGuess
         if (letter !== "" && correct) {
-            // if letter is already in the rightGuess do nothing
-            if (rightGuess.includes(letter)) return;
             // if letter is in almostGuess then remove is from there and the put letter into the rightGuess
             if (almostGuess.includes(letter)) {
-                const newAlmostGuess = almostGuess.map(
+                const newAlmostGuess = almostGuess.filter(
                     (guessAlphabet) => guessAlphabet !== letter
                 );
                 setAlmostGuess(newAlmostGuess);
             }
+            // if letter is already in the rightGuess do nothing
+            if (rightGuess.includes(letter)) return;
+
             setRightGuess((previousRightGuess) => [
                 ...previousRightGuess,
                 letter,

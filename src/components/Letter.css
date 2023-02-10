@@ -1,5 +1,5 @@
 .letter {
-    border: 2px solid var(--main-text-light-color);
+    border: 2px solid var(--main-text-color);
     border-radius: 5px;
     width: 20%;
     margin: 2px;

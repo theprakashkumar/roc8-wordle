@@ -1,0 +1,23 @@
+.game-over {
+    margin-top: 30px;
+}
+
+.heading {
+    font-size: 2rem;
+}
+
+.result {
+    font-size: 1.8rem;
+}
+
+.play-again-button {
+    font-size: 1.6rem;
+    padding: .8rem;
+    border: none;
+    background: var(--main-text-color);
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-family: inherit;
+    cursor: pointer;
+}

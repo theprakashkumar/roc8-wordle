@@ -78,9 +78,33 @@ export const DataProvider = ({ children }) => {
         setCurrentAttempt({ ...currentAttempt, letter: currentLetter + 1 });
     };
 
-    useEffect(() => {
+    const getNewWord = () => {
         const randomWord = words[Math.floor(Math.random() * words.length)];
         setCorrectWord(randomWord);
+    };
+
+    const playAgain = () => {
+        console.log("play again");
+        getNewWord();
+        setBoard([
+            ["", "", "", "", ""],
+            ["", "", "", "", ""],
+            ["", "", "", "", ""],
+            ["", "", "", "", ""],
+            ["", "", "", "", ""],
+            ["", "", "", "", ""],
+        ]);
+        setCurrentAttempt({ letter: 0, row: 0 });
+        setWrongGuess([]);
+        setRightGuess([]);
+        setAlmostGuess([]);
+        setGameOver(false);
+        setCorrectlyGuessed(false);
+    };
+
+    useEffect(() => {
+        // getNewWord();
+        setCorrectWord("great");
     }, []);
 
     return (
@@ -106,6 +130,7 @@ export const DataProvider = ({ children }) => {
                 setGameOver,
                 correctlyGuessed,
                 setCorrectlyGuessed,
+                playAgain,
             }}
         >
             {children}
