@@ -103,8 +103,7 @@ export const DataProvider = ({ children }) => {
     };
 
     useEffect(() => {
-        // getNewWord();
-        setCorrectWord("great");
+        getNewWord();
     }, []);
 
     return (
